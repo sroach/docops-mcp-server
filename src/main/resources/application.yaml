@@ -1,0 +1,25 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: visualization
+  ai:
+    mcp:
+      server:
+        enabled: true
+        name: docops-mcp-server
+        version: 1.0.0
+        type: sync
+        instructions: "This server provides capabilities for docops visualizations"
+        sse-endpoint: /mcp/messages
+        capabilities:
+          tool: true
+
+logging:
+  pattern:
+    console:
+  file:
+    name: ./model-context-protocol/docops/starter-stdio-server/target/docops.log
+
+server:
+  port: 8085

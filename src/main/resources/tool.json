@@ -1,0 +1,65 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "tools": [
+      {
+        "name": "Docops Feature Card",
+        "description": "Generates a List Feature Card Visualization",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "featureCards": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "colorScheme": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "details": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "emoji": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "colorScheme",
+                  "description",
+                  "details",
+                  "emoji",
+                  "title"
+                ]
+              },
+              "description": "A list of feature card data"
+            },
+            "theme": {
+              "type": "string",
+              "description": "Can be one of LIGHT, DARK, AUTO"
+            },
+            "layout": {
+              "type": "string",
+              "description": "Can be one of GRID, COLUMN, ROW"
+            }
+          },
+          "required": [
+            "featureCards",
+            "theme",
+            "layout"
+          ],
+          "additionalProperties": false
+        }
+      }
+    ]
+  }
+}
